@@ -54,6 +54,7 @@ body {
 
 #player-2 {
   grid-area: B;
+  height: fit-content;
 }
 
 #player-3 {
@@ -67,17 +68,28 @@ body {
   border-radius: 1rem;
 }
 
+.player img {
+  width: 8.4rem;
+  height: 8.4rem;
+  object-fit: cover;
+}
+
+.info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+}
+
 .info {
   color: #e1e1e6;
-  display: grid;
-  gap: 1rem;
 }
 
 .info h1 {
   font-family: 'Roboto';
   font-weight: 700;
-  font-size: 2.4007rem;
+  font-size: 2.4rem;
   line-height: 100%;
+  margin-bottom: 0.9rem;
 }
 
 .info p {
@@ -98,13 +110,34 @@ body {
   font-size: 2.8rem;
 }
 
+.horizontal .controls {
+  padding: 0 5.7rem;
+}
+
 .track {
+  margin-top: 2.8rem;
+  position: relative;
 }
 
 .track::before {
+  content: '';
+  height: 0.6rem;
+  width: 100%;
+  display: block;
+  background: #d9d9d9;
+  opacity: 0.3;
+  border-radius: 10px;
+  position: absolute;
 }
 
 .track::after {
+  content: '';
+  height: 0.6rem;
+  width: 80%;
+  display: block;
+  background: #d9d9d9;
+  opacity: 0.8;
+  border-radius: 10px;
 }
 
 .time {
@@ -117,4 +150,17 @@ body {
 
   color: #c4c4cc;
   margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .horizontal .controls {
+    padding: 3rem;
+  }
 }
