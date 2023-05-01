@@ -152,15 +152,16 @@ body {
   margin-top: 1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 670px) {
   #app {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    margin: auto;
+    max-width: 270px;
+    height: auto;
+    padding-block: 60px;
   }
 
   .horizontal .controls {
-    padding: 3rem;
+    padding-inline: 3rem;
   }
 }
